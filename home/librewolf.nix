@@ -14,7 +14,6 @@
 		};
 		settings = {
 			"beacon.enabled" = false;
-      			"browser.startup.page" = 3;
       			"device.sensors.enabled" = false;
       			"dom.battery.enabled" = false;
       			"dom.event.clipboardevents.enabled" = false;
