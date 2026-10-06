@@ -24,6 +24,7 @@
      			"privacy.resistFingerprinting" = false;
 			"privacy.trackingprotection.enabled" = true;
 			"privacy.trackinprotection.socialtracking.enabled" = true;
+			"browser.display.use_document_fonts" = 0;
 		};
 	};
 }
