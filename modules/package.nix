@@ -6,6 +6,7 @@
 		obsidian
 		gcc
 		cmake
+		kitty
 		neovim
 		python3
 		vim

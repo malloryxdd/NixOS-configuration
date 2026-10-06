@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ config, lib, inputs, ... }:
 {
 	imports = [
 		inputs.noctalia.homeModules.default
@@ -9,7 +9,9 @@
 
 		settings = {
 			theme.mode = "dark";
-			bar.default.position = "top";
+			bar.default = {
+				position = "top";
+			};
 			wallpaper = {
 				enabled = true;
 				fill_mode = "crop";

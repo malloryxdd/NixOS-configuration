@@ -2,9 +2,11 @@
 {
 	programs.kitty = {
 		enable = true;
-		settings = {
-			font-size = 13;
-			font-family = "JetBrains Mono Nerd Font";
+		themeFile = "Catppuccin-Mocha";
+		settings.background_opacity = "0.8";
+		font = {
+			name = "JetBrains Mono Nerd Font";
+			size = 12;
 		};
 	};
 }

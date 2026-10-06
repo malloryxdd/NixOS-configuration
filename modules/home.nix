@@ -10,5 +10,6 @@
 		users = {
 			medi = import ../home/home.nix;
 		};
+		backupFileExtension = "bckp";
 	};
 }
