@@ -33,6 +33,9 @@
 				blur_intensity = 0;
 				tint_intensity = 0;
 			};
+			ui = {
+				fontDefault = "Iosevka NF";
+			};
 		};
 	};
 }

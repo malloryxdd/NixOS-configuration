@@ -2,7 +2,7 @@
 {
 	home.packages = with pkgs; [
 		nerd-fonts.iosevka
+		nerd-fonts.jetbrains-mono
 		libreoffice
 	];
-	fonts.fontconfig.enable = true;
 }
