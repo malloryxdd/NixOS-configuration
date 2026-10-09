@@ -1,4 +1,4 @@
-{ config, lib, inputs, ... }:
+{ config, lib, inputs, configDir, ... }:
 {
 	imports = [
 		inputs.noctalia.homeModules.default
@@ -22,7 +22,7 @@
 				transition_on_startup = false;
 				per_monitor_directories = false;
 				palette_source = "wallpaper";
-				directory = "./wallpapers";
+				directory = config.lib.file.mkOutOfStoreSymlink "${configDir}/home/niri/wallpapers";
 				automation = {
 					enabled = true;
 					interval_seconds = 600;

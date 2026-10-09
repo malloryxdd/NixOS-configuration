@@ -28,12 +28,21 @@
 	url = "github:NixOs/nixos-hardware";
 	inputs.nixpkgs.follows = "nixpkgs";
      };
+
+     nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nur, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
-      modules = [
+      modules = [ 
+        {
+		_module.args.configDir = "/etc/nixos";
+		nixpkgs.overlays = [ nur.overlays.default ];
+	}
         ./configuration.nix
         inputs.home-manager.nixosModules.default
 	inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t470s

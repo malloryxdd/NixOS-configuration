@@ -3,13 +3,16 @@
 	programs.librewolf = {
 		enable = true;
 		profiles = {
-			${config.home.username}= {
+			${config.home.username} = {
 				isDefault = true;
-				#extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-				#	ublock-origin
-				#	darkreader
-				#	sponsorblock
-				#];
+				extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+					ublock-origin
+					sponsorblock
+				];
+			#	extensions.settings = {
+			#		"uBlock00@raymondhill.net".private_browsing = true;
+			#		"sponsorBlocker@ajay.app".private_browsing = true;
+			#	};
 			};
 		};
 		settings = {
@@ -25,6 +28,7 @@
 			"privacy.trackingprotection.enabled" = true;
 			"privacy.trackinprotection.socialtracking.enabled" = true;
 			"browser.display.use_document_fonts" = 0;
+			"extensions.autoDisableScopes" = 0;
 		};
 	};
 }
