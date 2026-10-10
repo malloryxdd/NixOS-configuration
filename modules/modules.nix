@@ -6,6 +6,7 @@
 		./locales.nix
 		./network.nix
 		./package.nix
+		./polkit-agent.nix
 		./sddm.nix
 		./service.nix
 		./settings.nix

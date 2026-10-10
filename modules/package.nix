@@ -5,7 +5,6 @@
 	environment.systemPackages = with pkgs; [
 		obsidian
 		gcc
-		gvfs
 		cmake
 		kitty
 		neovim
@@ -17,6 +16,7 @@
 		thunar
 		mupdf
 		xwayland-satellite
+		kdePackages.polkit-kde-agent-1
 	];
 	programs.nix-ld.enable = true;
 	programs.xfconf.enable = true;
