@@ -13,6 +13,7 @@
 	./fonts.nix
 	./librewolf.nix
 	./kitty.nix
+	./thunar.nix
   ];
 
   home.stateVersion = "26.05"; # DO NOT UPDATE!

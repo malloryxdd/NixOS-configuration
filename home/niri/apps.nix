@@ -2,5 +2,5 @@
 {
 	browser = "librewolf";
 	terminal = "kitty";
-	fileManager = "dolphin";
+	fileManager = "thunar";
 }

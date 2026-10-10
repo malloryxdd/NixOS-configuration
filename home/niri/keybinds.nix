@@ -3,10 +3,8 @@
 let
   apps = import ./apps.nix { inherit pkgs; };
 
-  # Extraemos la librería de acciones a una variable local
   niriActions = config.lib.niri.actions;
 
-  # Helper para noctal.ia usando las acciones extraídas
   noctalia = cmd:
     niriActions.spawn "noctalia" ([ "msg" ] ++ (lib.splitString " " cmd));
 in

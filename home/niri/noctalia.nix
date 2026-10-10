@@ -6,7 +6,6 @@
 
 	programs.noctalia = {
 		enable = true;
-
 		settings = {
 			theme.mode = "dark";
 			bar.default = {

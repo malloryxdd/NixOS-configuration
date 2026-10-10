@@ -5,6 +5,7 @@
 	environment.systemPackages = with pkgs; [
 		obsidian
 		gcc
+		gvfs
 		cmake
 		kitty
 		neovim
@@ -13,7 +14,10 @@
 		godot
 		wget
 		fastfetch
-		kdePackages.dolphin
+		thunar
+		mupdf
+		xwayland-satellite
 	];
 	programs.nix-ld.enable = true;
+	programs.xfconf.enable = true;
 }
