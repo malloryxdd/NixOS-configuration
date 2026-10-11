@@ -10,7 +10,7 @@
      };
 
      niri = {
-	url = "github:sodiboo/niri-flake";
+	url = "github:epireyn/niri-flake";
 	inputs.nixpkgs.follows = "nixpkgs";
      };
 
@@ -36,14 +36,17 @@
   };
 
   outputs = { self, nixpkgs, nur, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [ 
         {
 		_module.args.configDir = "/etc/nixos";
-		nixpkgs.overlays = [ nur.overlays.default ];
+		nixpkgs.overlays = [ 
+			inputs.niri.overlays.niri	
+			nur.overlays.default
+		];
 	}
-        ./configuration.nix
+        hosts/thinkpad/configuration.nix
         inputs.home-manager.nixosModules.default
 	inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t470s
       ];

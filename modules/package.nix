@@ -13,10 +13,8 @@
 		godot
 		wget
 		fastfetch
-		thunar
 		mupdf
 		xwayland-satellite
-		kdePackages.polkit-kde-agent-1
 	];
 	programs.nix-ld.enable = true;
 	programs.xfconf.enable = true;

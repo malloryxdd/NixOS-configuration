@@ -9,9 +9,10 @@
 		extraSpecialArgs = { 
 			inherit inputs; 
 			inherit configDir;
+			inherit (config) profile;
 		};
-		users = {
-			medi = import ../home/home.nix;
+		users.medi = {
+			imports = [../home/home.nix];
 		};
 		backupFileExtension = "bckp";
 	};
