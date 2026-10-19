@@ -21,6 +21,17 @@
 				};
 			};
 			gaps = 8;
+			center-focused-column = "never";
+			default-column-width = { proportion = 0.5; };
+			shadow = {
+				softness = 30;
+				spread = 5;
+				offset = {
+					x = 0;
+					y = 5;
+				};
+				color = "#0007";
+			};
 		};
 		input = {
 			keyboard = {

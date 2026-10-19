@@ -6,6 +6,7 @@
       ../../modules/modules.nix
     ];
 
+
     options.profile = lib.mkOption {
 	type = lib.types.str;
 	default = "thinkpad";

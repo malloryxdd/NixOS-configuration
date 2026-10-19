@@ -7,6 +7,7 @@
 		syntaxHighlighting.enable = true;
 		shellAliases = {
 			nrs = "sudo nixos-rebuild switch --flake /etc/nixos#${profile}";
+			nru = "sudo nix flake update && sudo nixos-rebuild switch --flake /etc/nixos#${profile}";
 		};	
 	};
 }

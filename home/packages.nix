@@ -7,6 +7,9 @@
 	] ++
 	lib.optionals (profile == "thinkpad") (with pkgs; [
 		thunar
+		drawio
+		nomacs
 		kdePackages.polkit-kde-agent-1
+		kdePackages.plasma-systemmonitor
 	]);
 }
