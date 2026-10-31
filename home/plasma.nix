@@ -38,6 +38,8 @@
 								"applications:org.kde.dolphin.desktop"
 								"applications:systemsettings.desktop"
 								"applications:librewolf.desktop"
+								"applications:spotify.desktop"
+								"applications:discord.desktop"
 							];
 							appearance.showTooltips = true;
 						};
