@@ -29,6 +29,8 @@
 			"privacy.trackinprotection.socialtracking.enabled" = true;
 			"browser.display.use_document_fonts" = 0;
 			"extensions.autoDisableScopes" = 0;
+			"browser.download.useDownloadDir" = false;
+			"widget.use-xdg-desktop-portal.file-picker" = 0;
 		};
 	};
 }
