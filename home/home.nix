@@ -9,11 +9,9 @@
 	./git.nix
 	./shell.nix
 	./packages.nix
-	./niri/default.nix
-	./fonts.nix
+	./plasma.nix
 	./librewolf.nix
 	./kitty.nix
-	./thunar.nix
   ];
 
   home.stateVersion = "26.05"; # DO NOT UPDATE!

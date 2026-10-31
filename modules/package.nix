@@ -13,9 +13,5 @@
 		godot
 		wget
 		fastfetch
-		mupdf
-		xwayland-satellite
 	];
-	programs.nix-ld.enable = true;
-	programs.xfconf.enable = true;
 }

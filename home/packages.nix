@@ -1,14 +1,24 @@
-{ profile, pkgs, lib, ... }:
+{ pkgs, ... }:
 {
 	home.packages = with pkgs; [
 		nerd-fonts.iosevka
 		nerd-fonts.jetbrains-mono
 		libreoffice
-	] ++
-	lib.optionals (profile == "thinkpad") (with pkgs; [
-		drawio
-		nomacs
-		kdePackages.polkit-kde-agent-1
-		kdePackages.plasma-systemmonitor
-	]);
+		nordic
+		plasmusic-toolbar
+		spotify
+		bottles
+		kdePackages.kamoso
+		stremio-linux-shell
+		openrgb
+		obs-studio
+		vlc
+		qbittorrent
+		google-chrome
+		kdePackages.kdeconnect-kde
+		telegram-desktop
+		zapzap
+		winetricks
+		gimp
+	];
 }

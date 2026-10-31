@@ -9,16 +9,6 @@
        inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     niri = {
-	url = "github:epireyn/niri-flake";
-	inputs.nixpkgs.follows = "nixpkgs";
-     };
-
-     noctalia = {
-	url = "github:noctalia-dev/noctalia";
-	inputs.nixpkgs.follows = "nixpkgs";
-     };
-
      arctis-sound-manager = {
 	url = "github:loteran/Arctis-Sound-Manager?dir=nix";
 	inputs.nixpkgs.follows = "nixpkgs";
@@ -33,17 +23,28 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-cachyos-kernel = {
+    	url = "github:xddxdd/nix-cachyos-kernel";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    plasma-manager = {
+	url = "github:nix-community/plasma-manager";
+	inputs.nixpkgs.follows = "nixpkgs";
+	inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { self, nixpkgs, nur, ... }@inputs: {
+  outputs = { self, nixpkgs, nur, nix-cachyos-kernel, ... }@inputs: {
     nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [ 
         {
 		_module.args.configDir = "/etc/nixos";
 		nixpkgs.overlays = [ 
-			inputs.niri.overlays.niri	
 			nur.overlays.default
+			nix-cachyos-kernel.overlays.pinned
 		];
 	}
         hosts/thinkpad/configuration.nix
