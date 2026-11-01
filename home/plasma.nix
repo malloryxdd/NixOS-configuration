@@ -1,12 +1,8 @@
 { lib, configDir, inputs, pkgs, profile, ... }:
 {
 	imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
-	xdg.configFile."kdeglobals".text = lib.generators.toINI {} {
-		General.TerminalApplication = "kitty";
-	};
 	programs.plasma = {
 		enable = true;
-
 		workspace = {
 			clickItemTo = "select";
 			widgetStyle = "MS Windows 9x";
@@ -19,7 +15,10 @@
 				interval = 450;
 			};
 		};
-
+		configFile = {
+			"kdeglobals"."General"."TerminalApplication" = "kitty";
+			"kdeglobals"."General"."TerminalService" = "kitty.desktop";
+		};
 		panels = [
 			{
 				location = "bottom";
