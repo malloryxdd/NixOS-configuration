@@ -18,6 +18,7 @@
 		zapzap
 		winetricks
 		gimp
+		yazi
 	]++ lib.optionals (profile == "gaming")[
 		steam
 		heroic
