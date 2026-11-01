@@ -7,7 +7,7 @@
 		gcc
 		cmake
 		kitty
-		neovim
+		lapce
 		python3
 		vim
 		godot
