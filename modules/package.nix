@@ -13,5 +13,10 @@
 		godot
 		wget
 		fastfetch
+		kdePackages.ffmpegthumbs
+		kdePackages.kdegraphics-thumbnailers
+		kdePackages.kimageformats
+		kdePackages.qtimageformats
+		kdePackages.taglib
 	];
 }

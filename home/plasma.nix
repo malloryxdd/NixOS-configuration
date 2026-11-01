@@ -1,6 +1,9 @@
 { lib, configDir, inputs, pkgs, profile, ... }:
 {
 	imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
+	xdg.configFile."kdeglobals".text = lib.generators.toINI {} {
+		General.TerminalApplication = "kitty";
+	};
 	programs.plasma = {
 		enable = true;
 
