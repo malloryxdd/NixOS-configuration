@@ -1,4 +1,4 @@
-{ configDir, inputs, pkgs, ... }:
+{ lib, configDir, inputs, pkgs, profile, ... }:
 {
 	imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
 	programs.plasma = {
@@ -36,10 +36,11 @@
 						iconTasks = {
 							launchers = [
 								"applications:org.kde.dolphin.desktop"
-								"applications:systemsettings.desktop"
 								"applications:librewolf.desktop"
 								"applications:spotify.desktop"
+							] ++ lib.optionals (profile == "gaming") [
 								"applications:discord.desktop"
+								"applications:steam.desktop"
 							];
 							appearance.showTooltips = true;
 						};

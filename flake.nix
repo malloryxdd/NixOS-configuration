@@ -34,6 +34,11 @@
 	inputs.nixpkgs.follows = "nixpkgs";
 	inputs.home-manager.follows = "home-manager";
     };
+
+    spicetify = {
+	url = "github:Gerg-L/spicetify-nix";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nur, nix-cachyos-kernel, ... }@inputs: {

@@ -8,10 +8,11 @@
   imports = [
 	./git.nix
 	./shell.nix
-	./packages.nix
+	./package.nix
 	./plasma.nix
 	./librewolf.nix
 	./kitty.nix
+	./spicetify.nix
   ];
 
   home.stateVersion = "26.05"; # DO NOT UPDATE!
