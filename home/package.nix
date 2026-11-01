@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, profile, ... }:
 {
 	home.packages = with pkgs; [
 		nerd-fonts.iosevka
@@ -18,5 +18,11 @@
 		zapzap
 		winetricks
 		gimp
+	]++ lib.optionals (profile == "gaming")[
+		steam
+		heroic
+		protonplus
+		retroarch
+		discord
 	];
 }

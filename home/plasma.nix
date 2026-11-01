@@ -5,7 +5,7 @@
 		enable = true;
 		workspace = {
 			clickItemTo = "select";
-			widgetStyle = "MS Windows 9x";
+			widgetStyle = "Windows";
 			colorScheme = "nordicbluish";
 			cursor.theme = "Nordic-cursors";
 			iconTheme = "Nordic-bluish";
@@ -43,6 +43,7 @@
 							] ++ lib.optionals (profile == "gaming") [
 								"applications:discord.desktop"
 								"applications:steam.desktop"
+								"applications:heroic.desktop"
 							];
 							appearance.showTooltips = true;
 						};
